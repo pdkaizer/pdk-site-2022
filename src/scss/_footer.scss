@@ -1,0 +1,40 @@
+footer {
+	background-color: $light-gray;
+	color: $dark-gray;
+	padding-top: 1.25em;
+	padding-bottom: 3em;
+	margin-top: 60px;
+}
+
+footer a {
+	color: $dark-gray;
+}
+
+.footer-container {
+	@include container;
+	font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 1.5rem;
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+}
+
+  .social a {
+	text-decoration: none;
+}
+
+.social ul {
+	margin: 0;
+	padding: 0;
+}
+
+.social ul li {
+	float: left;
+	list-style-type: none;
+	margin-left: 0;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}

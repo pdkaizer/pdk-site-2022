@@ -4,29 +4,26 @@ html, body {
   }
   
   body {
-    text-align: center;
+    text-align: left;
     color: $primary-text-color;
-    font-family: Georgia, serif;
-    font-weight: normal;
-    line-height: 28px;
-    font-size: 14px;
+    font-family: $base-font-family;
+    font-weight: 400;
+    line-height: 2rem;
+    font-size: $basefontsize;
     background-color: $primary-page-color;
-    padding: 2rem;
-    border-top: 3px solid $secondary-text-color;
-  
+    a {
+      color: $accent;
+    }
     @include bp(mid) {
-      border-top-color: $accent-color;
       font-size: 16px;
     }
     @include bp(wide) {
-      border-top-color: $accent-color-alternate;
       font-size: 18px;
     }
   }
   
   .container {
-    max-width: 90%;
-    margin:0 auto;
+    @include container;
   
     @include bp(mid) {
       max-width: 700px;
@@ -35,9 +32,108 @@ html, body {
       max-width: 1000px;
     }
   }
+
+  .hero {
+    background-color: $dark-gray;
+    color: $light-gray;
+    padding: 5px;
+    margin-top: 20px;
+  }
+
+  .hero-content {
+    max-width: 1040px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    @media  (max-width: 449px) {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-gap: 10px;
+    }
+  }
+
+  .about-img {
+    max-height: 25em;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
   
   ul {
     margin: 1rem auto;
     text-align: left;
   }
+  
+  h1, h2, h3, h4 {
+    font-family: $base-font-family;
+    font-weight: 300;
+  }
+
+  h1 {
+    line-height: 1em;
+    margin: 10px;
+  }
+  
+  strong {
+    font-weight: 600;
+  }
+
+  .contact {
+    width: 380px;
+    margin-top: 20px;
+    p {
+      font-size: 1.75em;
+      font-weight: 300;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  blockquote {
+    font-family: $heading-font-family;
+    font-size: 3rem;
+    line-height: 4rem;
+    margin: 0 auto;
+    padding: auto;
+    @media  (max-width: 580px) {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  .resume-header-back {
+    @media  (min-width: 1159px) {
+      margin-top: 1em;
+      margin-left: 150px;
+    }
+    @media  (min-width: 1050px) and (max-width: 1158px) {
+      margin-top: 1em;
+      margin-left: 50px;
+    }
+    @media  (max-width: 1049px) {
+      margin-top: 1em;
+      margin-left: 0;
+    }
+  }
+
+ .back {
+    display: inline-block;
+    background-color: $dark-gray;
+    color: $white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
   

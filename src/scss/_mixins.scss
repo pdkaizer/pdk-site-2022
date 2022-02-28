@@ -11,3 +11,35 @@
   }
 
 }
+
+@mixin container($width: 75%, $max-width: 970px) {
+  width: $width;
+  margin: 0 auto;
+  max-width: $max-width;
+  @media  (max-width: 449px) {
+    width: 90%;
+  }
+}
+
+@mixin resume-container($width: 60%, $max-width: 770px) {
+  width: $width;
+  margin: 0 auto;
+  max-width: $max-width;
+  @media  (max-width: 449px) {
+    width: 90%;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin img-responsive ($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}

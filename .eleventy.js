@@ -5,7 +5,8 @@ const fs = require("fs-extra");
 module.exports = (eleventyConfig) => {
 
   // pass files direclty through to the output
-  eleventyConfig.addPassthroughCopy("site/images");
+  eleventyConfig.addPassthroughCopy("src/site/images");
+  eleventyConfig.addPassthroughCopy("src/site/js");
 
   // watch the scss source files in case of need to regenerate
   eleventyConfig.addWatchTarget("src/scss/");

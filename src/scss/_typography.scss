@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Source+Sans+Pro:300,400,400i,700');
+
+$ff-s:  'Playfair Display', serif;
+$ff-ss: 'Source Sans Pro', sans-serif;
+
+$fw-n: 300;
+$fw-b: 600;
+
+@mixin sans-serif($fs, $ls: .15em, $color: $dark-gray, $tt: uppercase, $lh: 1.6) {
+  font-size: $fs;
+  letter-spacing: $ls;
+  color: $color;
+  text-transform: $tt;
+  line-height: $lh;
+  font-family: $ff-ss;
+  font-weight: $fw-n;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Source+Sans+Pro:300,400,400i,700');
+
+// Typography
+$base-font-family: 'Source Sans Pro', sans-serif;
+$heading-font-family: 'Playfair Display', serif;
+$condensed-font-family: 'Source Sans Pro', sans-serif;
+//$base-font-family: 'Open Sans', sans-serif;
+//$heading-font-family: 'Open Sans', sans-serif;
+//$condensed-font-family: 'Open Sans Condensed', sans-serif;
+$basefontsize: 16;
