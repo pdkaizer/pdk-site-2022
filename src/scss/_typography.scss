@@ -1,28 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Source+Sans+Pro:300,400,400i,700');
+// Typography
 
-$ff-s:  'Playfair Display', serif;
-$ff-ss: 'Source Sans Pro', sans-serif;
-
-$fw-n: 300;
-$fw-b: 600;
-
-@mixin sans-serif($fs, $ls: .15em, $color: $dark-gray, $tt: uppercase, $lh: 1.6) {
-  font-size: $fs;
-  letter-spacing: $ls;
-  color: $color;
-  text-transform: $tt;
-  line-height: $lh;
-  font-family: $ff-ss;
-  font-weight: $fw-n;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Source+Sans+Pro:300,400,400i,700');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
 
 // Typography
-$base-font-family: 'Source Sans Pro', sans-serif;
-$heading-font-family: 'Playfair Display', serif;
-$condensed-font-family: 'Source Sans Pro', sans-serif;
-//$base-font-family: 'Open Sans', sans-serif;
-//$heading-font-family: 'Open Sans', sans-serif;
-//$condensed-font-family: 'Open Sans Condensed', sans-serif;
+$base-font-family: 'Karla', sans-serif;
+$heading-font-family: 'Karla', sans-serif;
+$condensed-font-family: 'Karla', sans-serif;
 $basefontsize: 16;
+
+:root {
+    --font-size: 120%;
+    --ratio: 1.333;
+  
+  /* Calculate values */
+    --h4: calc(var(--font-size) * var(--ratio));
+    --h3: calc(var(--h4) * var(--ratio));
+    --h2: calc(var(--h3) * var(--ratio));
+    --h1: calc(var(--h2) * var(--ratio));
+  }
+  
+  p {
+    font-size: var(--font-size);
+  }
+  
+  h4 {
+    font-size: var(--h4);
+  }
+  
+  h3 {
+    font-size: var(--h3);
+  }
+  
+  h2 {
+    font-size: var(--h2);
+  }
+  
+  h1 {
+    font-size: var(--h1);
+  }

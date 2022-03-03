@@ -12,12 +12,21 @@
 
 }
 
-@mixin container($width: 80%, $max-width: 970px) {
+@mixin header-container($width: 95%, $max-width: 1600px) {
   width: $width;
   margin: 0 auto;
   max-width: $max-width;
   @media  (max-width: 449px) {
-    width: 90%;
+    width: 95%;
+  }
+}
+
+@mixin container($width: 80%, $max-width: 1170px) {
+  width: $width;
+  margin: 0 auto;
+  max-width: $max-width;
+  @media  (max-width: 449px) {
+    width: 95%;
   }
 }
 
