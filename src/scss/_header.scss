@@ -11,12 +11,9 @@ header {
 	display: grid;
 	grid-column-gap:1rem;
 	grid-template-columns: 60px 380px 1fr;
-	@include bp(mid) {
-
-	  }
-	  @include bp(wide) {
-
-	  }
+	@media  (max-width: 549px) {
+		grid-template-columns: 60px 220px 1fr;
+	}
 }
 
 .header-logo {
@@ -63,7 +60,7 @@ header {
 		display: none;
 	}
 	margin-top: 1.5em;
-	float: right;
+	float: left;
 }
 
 .header-nav {
