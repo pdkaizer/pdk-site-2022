@@ -1,21 +1,11 @@
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous">
-   <title>{{ title }}</title>
-</head>
+{% include "head.njk" %}
 <body>
 
 {% include "header.njk" %}
 
-<section class="hero">
-    <div class="hero-content">
-        <div><blockquote>"I'm passionate about anything that's useful and beautifully designed — a chef's knife, a bowl, an email system...."</blockquote></div>
-        <div><img src="/images/pdk-memoji.jpeg" align="center" class="about-img" alt=""></div>
-    </div>
-</section>
+{% include "home-hero.njk" %}
+{% include "home-header-image-down.njk" %}
 
 <div class="container">
  {{ content | safe }}

@@ -1,0 +1,14 @@
+<ul>
+{%- for post in pagination.items -%}
+<li>
+<figure>
+<img src="/images/header-images/{{ post.data.headerImage }}"  alt="{{ post.data.title }}">
+<figcaption><h3>{{ post.data.title }}</h3></figcaption>
+</figure>
+<p><i class="far fa-calendar-alt"></i> {{ post.date | dateDisplay("LLL d, y") }}<br />
+{{ post.data.summary }}<br />
+<a href="{{ post.url }}">Read more</a>
+</p>
+</li>
+{%- endfor -%}
+</ul>

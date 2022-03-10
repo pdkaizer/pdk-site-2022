@@ -135,5 +135,15 @@ html, body {
     cursor: pointer;
     margin: 5px;
   }
+
+  .about-photo {
+    max-height: 25em;
+    border-radius: 50%;
+  
+    @media (min-width: 42em) {
+      float: right;
+      margin-right: 1em;
+    }
+  }
   
   
