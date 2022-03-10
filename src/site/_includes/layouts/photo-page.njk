@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+{% include "head.njk" %}
+  <body class="{{ bodyClass }}" >
+ {% include "header.njk" %}
+
+ {% include "photo-gallery-hero.njk" %}
+
+<div class="photo-page-area">
+	{{ content | safe }}
+</div>
+
+{% include "footer.njk" %}
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="/js/main.js"></script>
+<script src="/js/off-canvas.js"></script>
+</body>
+</html>

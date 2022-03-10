@@ -9,11 +9,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/site/js");
 
   // Add some utiliuty filters
-  eleventyConfig.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
-    return DateTime.fromJSDate(dateObj, {
-      zone: "utc"
-    }).toFormat(format);
-  });
 
   // watch the scss source files in case of need to regenerate
   eleventyConfig.addWatchTarget("src/scss/");

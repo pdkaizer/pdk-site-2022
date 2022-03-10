@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+{% include "head.njk" %}
+<body class="{{ bodyClass }}" >
+{% include "header.njk" %}
+
+ {% include "photo-landing-hero.njk" %}
+
+<section  class="photo-page-area">
+  <div class="photos-landing-container">
+     <ul>
+          <li>
+          <figure>
+            <img src="{{ pg1image }}" class="img-responsive" />
+            <figcaption><h3><a href="{{ pg1url }}">{{ pg1name }}</a></h3></figcaption>
+          </figure>
+          </li>
+          <li>
+          <figure>
+            <img src="{{ pg2image }}" class="img-responsive" />
+            <figcaption><h3><a href="{{ pg2url }}">{{ pg2name }}</a></h3></figcaption>
+          </figure>
+          </li>
+          <li>
+          <figure>
+            <img src="{{ pg3image }}" class="img-responsive" />
+            <figcaption><h3><a href="{{ pg3url }}">{{ pg3name }}</a></h3></figcaption>
+          </figure>
+          </li>
+     </ul>
+  </div>
+</section>
+
+      {% include "footer.njk" %}
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="/js/main.js"></script>
+<script src="/js/off-canvas.js"></script>
+  </body>
+</html>

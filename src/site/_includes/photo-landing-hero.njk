@@ -1,0 +1,14 @@
+<section  class="photo-gallery-hero">
+    <div class="photo-gallery-hero-area">
+        <div class="photo-gallery-hero-content">
+            <div>
+              <h1><i class="{{ icon }}"></i> {{ title }}</h1>
+               {{ content | safe }}
+              <h2>Featured Photo Gallery - {{ featuredGalleryName }}</h2>
+              <p>{{ featuredGalleryIntro }}</p>
+              <h4><a href="{{ featuredGalleryurl }}">Go to photo gallery <i class="fas fa-arrow-right"></i></a></h4>
+            </div>
+            <div><img src="/images/photos/{{ featuredGalleryPhoto }}" class="img-responsive" /></div>
+        </div>
+    </div>
+</section>
