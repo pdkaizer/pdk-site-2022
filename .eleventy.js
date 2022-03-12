@@ -1,21 +1,11 @@
 const sass = require("sass");
 const fs = require("fs-extra");
-const { DateTime } = require("luxon");
 
 module.exports = (eleventyConfig) => {
 
   // pass files direclty through to the output
   eleventyConfig.addPassthroughCopy("src/site/images");
   eleventyConfig.addPassthroughCopy("src/site/js");
-
-// Add some utiliuty filters
-module.exports = function (config) {
-  config.addFilter("asPostDate", (dateObj) => {
-   return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
-
-    // other config likely here
-  });
-}
 
   // watch the scss source files in case of need to regenerate
   eleventyConfig.addWatchTarget("src/scss/");

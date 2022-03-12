@@ -1,0 +1,130 @@
+
+.post-area {
+    @include container;
+  }
+
+.post {
+    margin-top: 25px;
+    padding-left: 10%;
+    padding-top: 25px;
+    width: 80%;
+    h1  {
+        font-weight: 300;
+        font-size: 2.5rem;
+        padding-bottom: 1.5rem;
+        margin-bottom: 0;
+      }
+    h2 {
+      font-weight: 300;
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    h3 {
+      font-weight: 300;
+      font-size: 1.25rem;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+    p, blockquote {
+        font-size: 1.2rem;
+        color: $secondary-text-color;
+    }
+    @media  (max-width: 648px) {
+      padding-left: 0;
+      padding-top: 5px;
+      width: 100%;
+      h1  {
+        font-size: 1.8rem;
+      }
+    }
+}
+
+.journal-listing  {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @media  (max-width: 454px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: .8rem;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
+
+.post-category {
+  background-color: #cccccc;
+  color: $secondary-text-color;
+  padding: 6px;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+.external {
+	border-left: solid 8px $light-gray;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	padding-left: .8em;
+}
+
+.resume-area {
+  @include container;
+}
+
+.resume {
+  margin-top: 25px;
+  padding-left: 10%;
+  padding-top: 25px;
+  width: 80%;
+  h1  {
+      font-weight: 300;
+      font-size: 2.5rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 0;
+    }
+  h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  h3 {
+    font-weight: 300;
+    font-size: 1.75rem;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  h4 {
+    font-weight: 300;
+    font-size: 1.50rem;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  p, blockquote {
+      font-size: 1.2rem;
+      color: $secondary-text-color;
+  }
+  p {
+    margin-top: 0;
+    padding-top: 0;
+}
+  ul {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  @media  (max-width: 648px) {
+    padding-left: 0;
+    padding-top: 5px;
+    width: 100%;
+    h1  {
+      font-size: 1.8rem;
+    }
+  }
+}

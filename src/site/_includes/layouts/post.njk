@@ -3,9 +3,25 @@
     {% include "head.njk" %}
 <body>
   {% include "header.njk" %}
-  <div class="container">
-    {{ content | safe }}
-  </div>
+
+  {% include "header-image.njk" %}
+
+<section class="post-area">
+    <div class="post">
+	  		<h1>{{ title }}</h1>
+	    	<h3><i class="far fa-calendar-alt"></i> {{ page.date }}</h3>
+
+	    		 {{ content | safe }}
+
+				{% for category  in categories %}
+					<span class="post-category">{{ category }}</span>
+				{% endfor %}
+
+
+		{% include "comments.njk" %}
+	</div>
+</section>
+
   {% include "footer.njk" %}
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
