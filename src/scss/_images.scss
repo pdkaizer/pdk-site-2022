@@ -1,0 +1,11 @@
+.about-photo {
+    border-radius: 50%;
+    float: right;
+    max-width: 400px;
+    @media  (max-width: 980px) {
+        max-width: 250px;
+    }
+    @media  (max-width: 580px) {
+        max-width: 150px;
+    }
+}
