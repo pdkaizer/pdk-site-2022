@@ -1,4 +1,5 @@
 const sass = require("sass");
+const { DateTime } = require("luxon");
 const fs = require("fs-extra");
 
 module.exports = (eleventyConfig) => {
@@ -9,6 +10,10 @@ module.exports = (eleventyConfig) => {
 
   // watch the scss source files in case of need to regenerate
   eleventyConfig.addWatchTarget("src/scss/");
+
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+  });
 
   // Compile Sass before a build
   eleventyConfig.on("beforeBuild", () => {
