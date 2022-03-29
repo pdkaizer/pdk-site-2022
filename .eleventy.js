@@ -1,8 +1,17 @@
 const sass = require("sass");
 const { DateTime } = require("luxon");
 const fs = require("fs-extra");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = (eleventyConfig) => {
+
+  const pluginRss = require("@11ty/eleventy-plugin-rss");
+
+
+  eleventyConfig.addPlugin(pluginRss);
+  //eleventyConfig.addPlugin(pluginSyntaxHighlight);
+  //eleventyConfig.addPlugin(pluginNavigation);
 
   // pass files direclty through to the output
   eleventyConfig.addPassthroughCopy("src/site/images");
@@ -10,6 +19,10 @@ module.exports = (eleventyConfig) => {
 
   // watch the scss source files in case of need to regenerate
   eleventyConfig.addWatchTarget("src/scss/");
+
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+  });
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
